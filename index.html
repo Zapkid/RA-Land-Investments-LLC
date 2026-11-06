@@ -1,0 +1,460 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RA Land Investments LLC | Land Advisory &amp; Consulting</title>
+<meta name="description" content="RA Land Investments LLC provides independent land advisory and consulting: land use and feasibility analysis, terrain and infrastructure evaluation, and strategic due diligence for landowners, builders, and investors.">
+<meta property="og:title" content="RA Land Investments LLC | Open Horizon">
+<meta property="og:description" content="Every piece of land has potential. We help you unlock it.">
+<meta property="og:image" content="/assets/logo.jpg">
+<meta name="theme-color" content="#f7f3ea">
+<link rel="icon" type="image/png" href="/assets/favicon.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --gold:#c39a45; --gold-dark:#a47e2f; --gold-soft:#e9d3a0;
+    --sage:#7f8f73; --sage-dark:#5d6b53; --sage-soft:#dfe5d6;
+    --cream:#f7f3ea; --paper:#fffdf8; --sky:#e8eef3;
+    --ink:#2f3329; --muted:#5f6457;
+    --serif:"Cormorant Garamond", Georgia, serif;
+    --sans:"Montserrat", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --radius:14px; --max:1180px;
+    --shadow:0 18px 40px -22px rgba(60,55,30,.35);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:var(--sans);color:var(--ink);background:var(--paper);line-height:1.7;font-size:16px;-webkit-font-smoothing:antialiased}
+  img{max-width:100%;height:auto;display:block}
+  a{color:inherit}
+  .wrap{width:100%;max-width:var(--max);margin:0 auto;padding:0 24px}
+  h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.15;margin:0 0 .5em;color:var(--ink)}
+  .eyebrow{font-size:.78rem;letter-spacing:.32em;text-transform:uppercase;color:var(--sage-dark);font-weight:600;margin:0 0 14px;display:inline-flex;align-items:center;gap:12px}
+  .eyebrow::before{content:"";width:34px;height:1px;background:var(--gold)}
+  .divider{display:flex;align-items:center;justify-content:center;gap:12px;color:var(--gold);margin:18px 0 26px}
+  .divider::before,.divider::after{content:"";width:60px;height:1px;background:var(--gold)}
+  .btn{display:inline-flex;align-items:center;gap:10px;padding:15px 30px;border-radius:999px;font-weight:600;font-size:.88rem;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;transition:transform .2s, background .2s, box-shadow .2s, color .2s;border:1.5px solid transparent;cursor:pointer;font-family:var(--sans)}
+  .btn-gold{background:var(--gold);color:#fff;box-shadow:0 10px 24px -12px rgba(163,126,47,.8)}
+  .btn-gold:hover{background:var(--gold-dark);transform:translateY(-2px)}
+  .btn-ghost{border-color:var(--sage);color:var(--sage-dark);background:rgba(255,255,255,.55)}
+  .btn-ghost:hover{background:var(--sage);color:#fff}
+
+  /* Top bar + nav */
+  .topbar{background:var(--sage-dark);color:#eef1e8;font-size:.82rem}
+  .topbar .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-top:8px;padding-bottom:8px;flex-wrap:wrap}
+  .topbar a{text-decoration:none;display:inline-flex;align-items:center;gap:7px}
+  .topbar a:hover{color:var(--gold-soft)}
+  .topbar .links{display:flex;gap:22px;flex-wrap:wrap}
+  header.nav{position:sticky;top:0;z-index:50;background:rgba(255,253,248,.92);backdrop-filter:blur(10px);border-bottom:1px solid rgba(127,143,115,.18)}
+  header.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:80px}
+  .brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+  .brand img{width:52px;height:52px;border-radius:10px;object-fit:cover}
+  .brand-text{font-family:var(--serif);font-size:1.35rem;line-height:1.05;letter-spacing:.06em;color:var(--gold-dark);font-weight:600}
+  .brand-text small{display:block;font-size:.72rem;color:var(--sage-dark);letter-spacing:.24em;font-family:var(--sans);font-weight:500;margin-top:4px}
+  nav ul{list-style:none;display:flex;gap:30px;margin:0;padding:0;align-items:center}
+  nav a{text-decoration:none;font-size:.86rem;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--ink);position:relative}
+  nav a:not(.btn)::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:1.5px;background:var(--gold);transition:width .25s}
+  nav a:not(.btn):hover::after{width:100%}
+  nav .btn{padding:11px 22px;color:#fff}
+  .menu-toggle{display:none;background:none;border:0;padding:8px;cursor:pointer;color:var(--ink)}
+
+  /* Hero */
+  .hero{position:relative;overflow:hidden;min-height:88vh;display:flex;align-items:center;background:linear-gradient(180deg,#dfe8ef 0%,#f3efe2 46%,#fbf3df 62%,#f6eedb 100%)}
+  .hero svg.scene{position:absolute;inset:auto 0 0 0;width:100%;height:44%;pointer-events:none}
+  .hero .sun{position:absolute;left:50%;bottom:30%;width:170px;height:170px;transform:translate(-50%,50%);border-radius:50%;background:radial-gradient(circle,#fff6d8 0%,#f6dc97 45%,rgba(246,220,151,0) 72%);filter:blur(2px);animation:glow 6s ease-in-out infinite}
+  @keyframes glow{50%{transform:translate(-50%,46%) scale(1.06)}}
+  .hero-content{position:relative;z-index:2;text-align:center;max-width:920px;margin:0 auto;padding:80px 24px 260px}
+  .hero h1{font-size:clamp(2.4rem,5.6vw,4.4rem);font-weight:600;color:var(--ink)}
+  .hero h1 em{font-style:italic;color:var(--gold-dark)}
+  .hero p.lead{font-size:clamp(1rem,1.6vw,1.15rem);color:var(--muted);max-width:680px;margin:0 auto 34px}
+  .hero .ctas{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .hero .eyebrow::before{display:none}
+  .hero .eyebrow{gap:0}
+
+  /* Intro */
+  section{padding:110px 0}
+  .intro{background:var(--paper)}
+  .intro-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:70px;align-items:center}
+  .intro-figure{position:relative;border-radius:var(--radius);background:#fff;box-shadow:var(--shadow);padding:20px}
+  .intro-figure::after{content:"";position:absolute;inset:-14px 14px 14px -14px;border:1.5px solid var(--gold-soft);border-radius:var(--radius);z-index:-1}
+  .intro-figure img{border-radius:8px}
+  .intro h2{font-size:clamp(2rem,3.6vw,2.9rem)}
+  .intro p{color:var(--muted)}
+  .intro strong{color:var(--ink)}
+  .audience{display:flex;gap:10px;flex-wrap:wrap;margin-top:26px}
+  .audience span{background:var(--sage-soft);color:var(--sage-dark);padding:8px 16px;border-radius:999px;font-size:.82rem;font-weight:600;letter-spacing:.04em}
+
+  /* Services */
+  .services{background:var(--cream);position:relative}
+  .section-head{text-align:center;max-width:720px;margin:0 auto 60px}
+  .section-head h2{font-size:clamp(2rem,3.8vw,3rem)}
+  .section-head p{color:var(--muted);margin:0}
+  .section-head .eyebrow::before{display:none}
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+  .card{background:var(--paper);border-radius:var(--radius);padding:42px 34px 38px;box-shadow:var(--shadow);position:relative;overflow:hidden;transition:transform .3s, box-shadow .3s;border:1px solid rgba(195,154,69,.15)}
+  .card::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--gold),var(--sage))}
+  .card:hover{transform:translateY(-6px);box-shadow:0 26px 50px -24px rgba(60,55,30,.45)}
+  .card .num{position:absolute;top:16px;right:26px;font-family:var(--serif);font-size:4.2rem;color:rgba(195,154,69,.16);font-weight:700;line-height:1}
+  .card .icon{width:66px;height:66px;border-radius:50%;background:var(--sage-soft);display:grid;place-items:center;font-size:1.8rem;margin-bottom:24px}
+  .card h3{font-size:1.65rem}
+  .card p{color:var(--muted);margin:0}
+
+  /* Process / why */
+  .why{background:var(--paper)}
+  .why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;margin-top:10px}
+  .why-item{text-align:center;padding:10px 8px}
+  .why-item .circle{width:84px;height:84px;margin:0 auto 18px;border-radius:50%;border:1.5px solid var(--gold);display:grid;place-items:center;color:var(--gold-dark)}
+  .why-item h3{font-size:1.35rem;margin-bottom:.35em}
+  .why-item p{color:var(--muted);font-size:.94rem;margin:0}
+
+  /* Quote band */
+  .band{background:linear-gradient(120deg,var(--sage-dark),var(--sage));color:#fff;text-align:center;position:relative;overflow:hidden;padding:100px 0}
+  .band::after{content:"";position:absolute;left:50%;bottom:-180px;width:520px;height:520px;transform:translateX(-50%);border-radius:50%;background:radial-gradient(circle,rgba(246,220,151,.35),rgba(246,220,151,0) 65%)}
+  .band blockquote{position:relative;z-index:1;margin:0 auto;max-width:860px;font-family:var(--serif);font-size:clamp(1.7rem,3.4vw,2.6rem);line-height:1.3;font-weight:500}
+  .band blockquote em{color:var(--gold-soft)}
+  .band .btn{margin-top:36px;position:relative;z-index:1}
+
+  /* Contact */
+  .contact{background:var(--cream)}
+  .contact-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:60px;align-items:start}
+  .contact h2{font-size:clamp(2rem,3.6vw,2.8rem)}
+  .contact p{color:var(--muted)}
+  .info{display:grid;gap:16px;margin-top:30px}
+  .info a{display:flex;align-items:center;gap:16px;text-decoration:none;background:var(--paper);padding:18px 22px;border-radius:var(--radius);box-shadow:var(--shadow);transition:transform .2s;border:1px solid rgba(195,154,69,.15)}
+  .info a:hover{transform:translateX(4px)}
+  .info .ic{width:46px;height:46px;border-radius:50%;background:var(--gold);color:#fff;display:grid;place-items:center;flex:none}
+  .info small{display:block;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--sage-dark);font-weight:600}
+  .info span{font-weight:600;font-size:1.02rem;word-break:break-word}
+  form{background:var(--paper);padding:40px;border-radius:var(--radius);box-shadow:var(--shadow);border:1px solid rgba(195,154,69,.15)}
+  form h3{font-size:1.8rem}
+  .row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  label{display:block;font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;color:var(--sage-dark);font-weight:600;margin:16px 0 7px}
+  input,select,textarea{width:100%;padding:13px 15px;border:1px solid #d9d4c4;border-radius:10px;font:inherit;font-size:.95rem;background:#fff;color:var(--ink);transition:border-color .2s, box-shadow .2s}
+  input:focus,select:focus,textarea:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(195,154,69,.18)}
+  textarea{min-height:120px;resize:vertical}
+  form .btn{margin-top:24px;width:100%;justify-content:center}
+  .form-note{font-size:.8rem;color:var(--muted);margin:12px 0 0;text-align:center}
+
+  /* Footer */
+  footer{background:#2f3329;color:#c9ccc0;padding:70px 0 30px;font-size:.92rem}
+  .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px}
+  footer h4{font-family:var(--serif);color:#fff;font-size:1.3rem;font-weight:600;margin:0 0 16px}
+  footer ul{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+  footer a{text-decoration:none}
+  footer a:hover{color:var(--gold-soft)}
+  .foot-brand{font-family:var(--serif);font-size:1.7rem;color:var(--gold-soft);letter-spacing:.06em}
+  .foot-brand span{color:#b7c2a9}
+  .foot-tag{letter-spacing:.32em;font-size:.72rem;text-transform:uppercase;color:#9ea594;margin:4px 0 18px}
+  .copy{border-top:1px solid rgba(255,255,255,.1);margin-top:50px;padding-top:24px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:.82rem;color:#8f9585}
+
+  /* Reveal */
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity .8s ease, transform .8s ease}
+  .reveal.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.hero .sun{animation:none}html{scroll-behavior:auto}}
+
+  /* Responsive */
+  @media (max-width:980px){
+    .cards{grid-template-columns:1fr;max-width:620px;margin:0 auto}
+    .intro-grid,.contact-grid{grid-template-columns:1fr;gap:50px}
+    .why-grid{grid-template-columns:repeat(2,1fr)}
+    .foot-grid{grid-template-columns:1fr 1fr}
+    .foot-grid > div:first-child{grid-column:1/-1}
+  }
+  @media (max-width:820px){
+    .menu-toggle{display:block}
+    nav ul{position:absolute;top:80px;left:0;right:0;flex-direction:column;gap:0;background:var(--paper);border-bottom:1px solid rgba(127,143,115,.2);padding:8px 24px 22px;display:none;align-items:stretch}
+    nav ul.open{display:flex}
+    nav li a:not(.btn){display:block;padding:14px 0;border-bottom:1px solid rgba(127,143,115,.15)}
+    nav li .btn{margin-top:16px;justify-content:center;width:100%}
+    .topbar .tag{display:none}
+  }
+  @media (max-width:560px){
+    section{padding:80px 0}
+    .wrap{padding:0 16px}
+    .row{grid-template-columns:1fr}
+    form{padding:28px 20px}
+    .why-grid,.foot-grid{grid-template-columns:1fr}
+    .brand-text{font-size:1.15rem}
+    .brand img{width:44px;height:44px}
+    .hero-content{padding:60px 16px 210px}
+    .hero svg.scene{height:30%}
+    .eyebrow{letter-spacing:.22em}
+    .topbar .links{gap:14px;font-size:.78rem}
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <span class="tag">Independent Land Advisory &amp; Consulting</span>
+    <div class="links">
+      <a href="tel:+19843685554"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>984-368-5554</a>
+      <a href="mailto:info@ralandinvestments.com"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>info@ralandinvestments.com</a>
+    </div>
+  </div>
+</div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="RA Land Investments LLC home">
+      <img src="/assets/apple-touch-icon.png" alt="" width="52" height="52">
+      <span class="brand-text">RA LAND<small>INVESTMENTS LLC</small></span>
+    </a>
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="menu">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+    <nav>
+      <ul id="menu">
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#approach">Approach</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a class="btn btn-gold" href="#contact">Get a Consultation</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero" aria-label="Introduction" style="padding:0">
+    <div class="sun" aria-hidden="true"></div>
+    <svg class="scene" viewBox="0 0 1440 560" preserveAspectRatio="none" aria-hidden="true">
+      <defs>
+        <linearGradient id="h1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#cfd8c2"/><stop offset="1" stop-color="#b9c4a8"/></linearGradient>
+        <linearGradient id="h2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e8d6ae"/><stop offset="1" stop-color="#d9c08a"/></linearGradient>
+        <linearGradient id="h3" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#a9b796"/><stop offset="1" stop-color="#8d9c7b"/></linearGradient>
+        <linearGradient id="road" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff3cf"/><stop offset="1" stop-color="#e9c46f"/></linearGradient>
+      </defs>
+      <path d="M0 230 C 180 170 360 160 560 210 S 900 240 1080 190 S 1340 150 1440 180 L1440 560 L0 560Z" fill="url(#h1)" opacity=".7"/>
+      <path d="M0 300 C 220 250 420 260 640 300 S 1000 330 1200 280 S 1380 250 1440 260 L1440 560 L0 560Z" fill="url(#h2)" opacity=".85"/>
+      <path d="M0 380 C 260 330 520 350 760 395 S 1180 420 1440 360 L1440 560 L0 560Z" fill="url(#h3)"/>
+      <path d="M716 250 C 700 290 760 310 730 350 C 690 400 560 430 520 560 L 900 560 C 860 450 790 410 770 360 C 750 310 735 290 724 250Z" fill="url(#road)" opacity=".9"/>
+    </svg>
+    <div class="hero-content">
+      <p class="eyebrow">RA Land Investments LLC &middot; Open Horizon</p>
+      <h1>Every Piece of Land Has Potential. <em>We Help You Unlock It.</em></h1>
+      <p class="lead">Land is more than just property&mdash;it&rsquo;s a blank canvas with endless possibilities. But understanding how to best utilize a parcel requires vision, expertise, and proper research.</p>
+      <div class="ctas">
+        <a class="btn btn-gold" href="#contact">Start Your Consultation</a>
+        <a class="btn btn-ghost" href="#services">Explore Services</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="intro" id="about">
+    <div class="wrap intro-grid">
+      <div class="intro-figure reveal">
+        <img src="/assets/logo.jpg" alt="RA Land Investments LLC logo: a winding road leading toward a rising sun over rolling hills, with the tagline Open Horizon" width="1168" height="784">
+      </div>
+      <div class="reveal">
+        <p class="eyebrow">Who We Are</p>
+        <h2>Independent Land Advisory &amp; Consulting</h2>
+        <p>At <strong>RA Land Investments LLC</strong>, we focus on independent Land Advisory &amp; Consulting. We help landowners, future builders, and investors navigate the complexities of land development, usage options, and long-term planning.</p>
+        <p>Every recommendation is grounded in objective research, so you can see the full picture of a parcel before you commit your time and capital.</p>
+        <div class="audience" aria-label="Who we serve">
+          <span>Landowners</span><span>Future Builders</span><span>Investors</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="services" id="services">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">Our Services</p>
+        <h2>Here Is How We Support Your Vision</h2>
+        <div class="divider" aria-hidden="true">&#10022;</div>
+      </div>
+      <div class="cards">
+        <article class="card reveal">
+          <span class="num" aria-hidden="true">01</span>
+          <div class="icon" aria-hidden="true">🧩</div>
+          <h3>Land Use &amp; Feasibility Analysis</h3>
+          <p>Unsure what can actually be done on a specific parcel? We help analyze zoning regulations, building codes, and access options so you know exactly what is possible.</p>
+        </article>
+        <article class="card reveal">
+          <span class="num" aria-hidden="true">02</span>
+          <div class="icon" aria-hidden="true">🗺️</div>
+          <h3>Navigating Terrain &amp; Infrastructure</h3>
+          <p>From power and water availability to easements and terrain assessment&mdash;we evaluate the practical details that determine a property&rsquo;s true functionality.</p>
+        </article>
+        <article class="card reveal">
+          <span class="num" aria-hidden="true">03</span>
+          <div class="icon" aria-hidden="true">💡</div>
+          <h3>Strategic Planning &amp; Due Diligence</h3>
+          <p>We provide clear, objective research to guide your decision-making process. Whether you&rsquo;re planning a private retreat, a future build, or holding for long-term growth, we ensure you have all the facts upfront.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="why" id="approach">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">Our Approach</p>
+        <h2>Clarity at Every Step</h2>
+        <div class="divider" aria-hidden="true">&#10022;</div>
+      </div>
+      <div class="why-grid">
+        <div class="why-item reveal">
+          <div class="circle"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="m16 8-2.5 5.5L8 16l2.5-5.5z"/></svg></div>
+          <h3>Vision</h3>
+          <p>We start with your goals for the land and what you want it to become.</p>
+        </div>
+        <div class="why-item reveal">
+          <div class="circle"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg></div>
+          <h3>Research</h3>
+          <p>Zoning, codes, access, utilities, easements and terrain, all reviewed objectively.</p>
+        </div>
+        <div class="why-item reveal">
+          <div class="circle"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 19V5M4 19h16M8 15l3-4 3 2 5-6"/></svg></div>
+          <h3>Strategy</h3>
+          <p>Clear findings and options that guide your decision-making process.</p>
+        </div>
+        <div class="why-item reveal">
+          <div class="circle"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 20h18M5 20V10l7-5 7 5v10M10 20v-5h4v5"/></svg></div>
+          <h3>Confidence</h3>
+          <p>Plan and build knowing you have all the facts upfront.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <blockquote class="reveal">Land ownership shouldn&rsquo;t be complicated. With the right advisory, you can plan and build with <em>absolute confidence.</em></blockquote>
+      <a class="btn btn-gold" href="#contact">Talk With Us Today</a>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap contact-grid">
+      <div class="reveal">
+        <p class="eyebrow">Contact</p>
+        <h2>Let&rsquo;s Explore Your Land&rsquo;s Potential</h2>
+        <p>Tell us about your parcel and your plans. We&rsquo;ll follow up to discuss how we can help you move forward with clarity.</p>
+        <div class="info">
+          <a href="tel:+19843685554">
+            <span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></span>
+            <div><small>Call Us</small><span>984-368-5554</span></div>
+          </a>
+          <a href="mailto:info@ralandinvestments.com">
+            <span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg></span>
+            <div><small>Email Us</small><span>info@ralandinvestments.com</span></div>
+          </a>
+        </div>
+      </div>
+      <form id="contact-form" class="reveal" novalidate>
+        <h3>Request a Consultation</h3>
+        <div class="row">
+          <div><label for="name">Full Name</label><input id="name" name="name" autocomplete="name" required></div>
+          <div><label for="phone">Phone</label><input id="phone" name="phone" type="tel" autocomplete="tel"></div>
+        </div>
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" autocomplete="email" required>
+        <div class="row">
+          <div>
+            <label for="role">I Am A</label>
+            <select id="role" name="role">
+              <option>Landowner</option><option>Future Builder</option><option>Investor</option><option>Other</option>
+            </select>
+          </div>
+          <div>
+            <label for="service">Interested In</label>
+            <select id="service" name="service">
+              <option>Land Use &amp; Feasibility Analysis</option>
+              <option>Terrain &amp; Infrastructure</option>
+              <option>Strategic Planning &amp; Due Diligence</option>
+              <option>Not sure yet</option>
+            </select>
+          </div>
+        </div>
+        <label for="message">Property Location &amp; Details</label>
+        <textarea id="message" name="message" placeholder="County, acreage, parcel ID, and what you have in mind..."></textarea>
+        <button class="btn btn-gold" type="submit">Send Message</button>
+        <p class="form-note" id="form-note">This opens your email app with your message addressed to info@ralandinvestments.com.</p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">RA LAND <span>INVESTMENTS LLC.</span></div>
+        <div class="foot-tag">Open Horizon</div>
+        <p>Independent Land Advisory &amp; Consulting for landowners, future builders, and investors.</p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">Land Use &amp; Feasibility</a></li>
+          <li><a href="#services">Terrain &amp; Infrastructure</a></li>
+          <li><a href="#services">Planning &amp; Due Diligence</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Get in Touch</h4>
+        <ul>
+          <li><a href="tel:+19843685554">984-368-5554</a></li>
+          <li><a href="mailto:info@ralandinvestments.com">info@ralandinvestments.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copy">
+      <span>&copy; <span id="year">2026</span> RA Land Investments LLC. All rights reserved.</span>
+      <span>Every piece of land has potential.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Mobile menu
+  const toggle = document.querySelector('.menu-toggle');
+  const menu = document.getElementById('menu');
+  toggle.addEventListener('click', () => {
+    const open = menu.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open);
+  });
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    menu.classList.remove('open'); toggle.setAttribute('aria-expanded', 'false');
+  }));
+
+  // Reveal on scroll
+  const els = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver(entries => entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+    }), { threshold: 0.12 });
+    els.forEach(el => io.observe(el));
+  } else { els.forEach(el => el.classList.add('in')); }
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Contact form -> mailto
+  document.getElementById('contact-form').addEventListener('submit', e => {
+    e.preventDefault();
+    const f = e.target, note = document.getElementById('form-note');
+    const name = f.name.value.trim(), email = f.email.value.trim();
+    if (!name || !/^\S+@\S+\.\S+$/.test(email)) {
+      note.textContent = 'Please enter your name and a valid email address.';
+      note.style.color = '#a1452f';
+      return;
+    }
+    const body = [
+      'Name: ' + name, 'Email: ' + email, 'Phone: ' + f.phone.value,
+      'I am a: ' + f.role.value, 'Interested in: ' + f.service.value, '', f.message.value
+    ].join('\n');
+    location.href = 'mailto:info@ralandinvestments.com?subject=' +
+      encodeURIComponent('Consultation Request from ' + name) + '&body=' + encodeURIComponent(body);
+    note.style.color = '';
+    note.textContent = 'Thank you! Your email app should open now. You can also call us at 984-368-5554.';
+  });
+</script>
+</body>
+</html>
